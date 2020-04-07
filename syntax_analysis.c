@@ -34,3 +34,17 @@ int lex();
 #define DIV_OP 24
 #define LEFT_PAREN 25
 #define RIGHT_PAREN 26
+
+/******************************************************/
+/* main driver */
+main() {
+/* Open the input data file and process its contents */
+ if ((in_fp = fopen("front.in", "r")) == NULL)
+  printf("ERROR - cannot open front.in \n");
+ else {
+  getChar();
+ do {
+ lex();
+ } while (nextToken != EOF);
+ }
+}
