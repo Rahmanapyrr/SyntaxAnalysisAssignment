@@ -68,7 +68,7 @@ void error(){
 void stmt(){
   if(nextToken == IDENT){
     lex();
-   else if(nextToken == ASSIGN_OP){
+   if(nextToken == ASSIGN_OP){
       expr();
     }
   }
