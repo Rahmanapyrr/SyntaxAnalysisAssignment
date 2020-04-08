@@ -45,7 +45,7 @@ void stmt();
 
 /******************************************************/
 /* main driver */
-main() {
+int main() {
 /* Open the input data file and process its contents */
  if ((in_fp = fopen(CHARS, "r")) == NULL)
  printf("ERROR - cannot open front.in \n");
