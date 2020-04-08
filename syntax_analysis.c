@@ -75,6 +75,11 @@ int lookup(char ch) {
   nextToken = ADD_OP;
   break;
    
+ case '=':
+  addChar();
+  nextToken = ASSIGN_OP;
+  break;
+   
  case '-':
   addChar();
   nextToken = SUB_OP;
