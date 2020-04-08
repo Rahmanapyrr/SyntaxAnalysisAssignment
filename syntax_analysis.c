@@ -1,6 +1,8 @@
 /* front.c - a lexical analyzer system for simple
  arithmetic expressions */
 
+// Adding this EBNF statement to the code in the book: "<stmt> → id = <expr>"
+
 #include <stdio.h>
 #include <ctype.h>
 
@@ -40,12 +42,16 @@ int lex();
 main() {
 /* Open the input data file and process its contents */
  if ((in_fp = fopen("front.in", "r")) == NULL)
-  printf("ERROR - cannot open front.in \n");
+ printf("ERROR - cannot open front.in \n");
  else {
   getChar();
- do {
- lex();
- } while (nextToken != EOF);
+  
+  //
+  do {
+   lex();
+   expr();
+ } 
+  while (nextToken != EOF);
  }
 }
 
