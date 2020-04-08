@@ -58,6 +58,7 @@ int main() {
    stmt();
  } 
   while (nextToken != EOF);
+  printf("\n\n");
  }
 }
 
