@@ -137,9 +137,7 @@ void getNonBlank() {
  while (isspace(nextChar))
   getChar();
 }
-/
- 
-*****************************************************/
+/*****************************************************/
 /* lex - a simple lexical analyzer for arithmetic
  expressions */
 int lex() {
