@@ -184,9 +184,8 @@ int lex() {
 
 void error(){
   printf("An error occured at %d\n", nextToken);
-}
+} /* End of function error */
 
-// define statement function 
 void stmt(){
   if(nextToken == IDENT){
     lex();
@@ -194,4 +193,20 @@ void stmt(){
       expr();
     }
   }
-}
+} /* End of stmt function */
+
+void factor() {  
+  printf("Enter <factor>\n");
+  if (nextToken == IDENT | nextToken == INT_LIT){
+    lex();
+  }  
+  else {    
+    if  (nextToken == LEFT_PAREN) {      
+      lex();    
+      if (nextToken == RIGHT_PAREN)
+        lex();      
+      else        
+        error();    
+    }  
+  } 
+  printf("Exit <factor>\n"); }  /* End of factor function */
