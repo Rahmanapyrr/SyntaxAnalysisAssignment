@@ -181,3 +181,7 @@ int lex() {
  nextToken, lexeme);
  return nextToken;
 } /* End of function lex */
+
+void error(){
+  printf("An error occured at %d\n", nextToken);
+}
