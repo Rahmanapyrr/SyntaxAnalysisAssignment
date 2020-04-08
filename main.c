@@ -230,13 +230,15 @@ void factor() {
     lex();
   }  
   else {    
-    if  (nextToken == LEFT_PAREN) {      
+    if (nextToken == LEFT_PAREN) {      
       lex();    
+      expr();
       if (nextToken == RIGHT_PAREN)
         lex();
-        factor();
       else        
         error();    
     }  
+     else      
+      error();
   } 
   printf("Exit <factor>\n"); }  /* End of factor function */
