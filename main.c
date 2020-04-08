@@ -15,6 +15,9 @@ int token;
 int nextToken;
 FILE *in_fp, *fopen();
 
+
+char PATH[] = "src.in";
+
 /* Function declarations */
 void addChar();
 void getChar();
