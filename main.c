@@ -49,7 +49,7 @@ main() {
   //
   do {
    lex();
-   expr();
+   stmt();
  } 
   while (nextToken != EOF);
  }
