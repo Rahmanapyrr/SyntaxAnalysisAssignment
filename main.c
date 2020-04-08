@@ -16,7 +16,7 @@ int nextToken;
 FILE *in_fp, *fopen();
 
 
-char FILE[] = "src.in";
+char CHARS[] = "src.in";
 
 /* Function declarations */
 void addChar();
@@ -44,7 +44,7 @@ int lex();
 /* main driver */
 main() {
 /* Open the input data file and process its contents */
- if ((in_fp = fopen(FILE, "r")) == NULL)
+ if ((in_fp = fopen(CHARS, "r")) == NULL)
  printf("ERROR - cannot open front.in \n");
  else {
   getChar();
