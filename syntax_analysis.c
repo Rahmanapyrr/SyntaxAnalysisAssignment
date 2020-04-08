@@ -185,3 +185,13 @@ int lex() {
 void error(){
   printf("An error occured at %d\n", nextToken);
 }
+
+// define statement function 
+void stmt(){
+  if(nextToken == IDENT){
+    lex();
+   else if(nextToken == ASSIGN_OP){
+      expr();
+    }
+  }
+}
