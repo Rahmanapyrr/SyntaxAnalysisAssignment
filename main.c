@@ -67,12 +67,15 @@ void error(){
 } /* End of function error */
 
 void stmt(){
+  printf("Enter <stmt> \n");
   if(nextToken == IDENT){
     lex();
    if(nextToken == ASSIGN_OP){
-      expr();
+     lex();
+     expr();
     }
   }
+  printf("Exit <stmt> \n");
 } /* End of stmt function */
 
 void factor() {  
@@ -244,7 +247,7 @@ int lex() {
  break;
  } /* End of switch */
  
- printf("Next token is: %d, Next lexeme is %s\n",
+ printf("Next token is: %d Next lexeme is %s\n",
  nextToken, lexeme);
  return nextToken;
 } /* End of function lex */
